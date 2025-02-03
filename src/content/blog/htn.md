@@ -3,7 +3,7 @@ title: "Building platforms for Canada's biggest hackathon"
 
 category: "Work"
 
-date: "12-30-2024"
+date: "2024-12-30"
 ---
 
 ![hackthenorth](/img/blog/htn/hackthenorth.jpg)
