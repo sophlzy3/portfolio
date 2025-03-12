@@ -1,0 +1,35 @@
+<section class="page-header">
+     <div class="container">
+       <h1>Portfolio</h1>
+       <p>A collection of my work and projects</p>
+     </div>
+   </section>
+   
+   <section class="portfolio-grid">
+     <div class="container">
+       <% if (projects.length === 0) { %>
+         <div class="empty-state">
+           <p>No projects found. Check back soon!</p>
+         </div>
+       <% } else { %>
+         <div class="projects-grid">
+           <% projects.forEach(project => { %>
+             <a href="/portfolio/<%= project.id %>" class="project-card">
+               <div class="project-image">
+                 <img src="/content/portfolio/images/<%= project.id %>/<%= project.thumbnail %>" alt="<%= project.title %>">
+               </div>
+               <div class="project-info">
+                 <h3><%= project.title %></h3>
+                 <p><%= project.shortDescription %></p>
+                 <div class="project-tags">
+                   <% project.tags.forEach(tag => { %>
+                     <span class="tag"><%= tag %></span>
+                   <% }) %>
+                 </div>
+               </div>
+             </a>
+           <% }) %>
+         </div>
+       <% } %>
+     </div>
+   </section>

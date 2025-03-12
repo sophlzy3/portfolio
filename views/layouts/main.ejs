@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie Liu | Personal Website</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Sophie Liu</a>
+            </div>
+            <nav>
+                <ul>
+                    <% navigation.forEach(function(item) { %>
+                        <li><a href="<%= item.link %>"><%= item.title %></a></li>
+                    <% }); %>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="/contact" class="button">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <%= new Date().getFullYear() %> Sophie Liu. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/sophlzy3" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sophie-liu-szylzz" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>

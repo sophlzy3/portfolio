@@ -1,0 +1,20 @@
+{
+     "name": "personal-website",
+     "version": "1.0.0",
+     "description": "Personal portfolio website",
+     "main": "server/app.js",
+     "scripts": {
+          "start": "node server/app.js",
+          "dev": "nodemon --watch server --watch _data --ext js,json,yml,yaml server/app.js"
+     },
+     "dependencies": {
+          "ejs": "^3.1.9",
+          "express": "^4.18.2",
+          "express-ejs-layouts": "^2.5.1",
+          "js-yaml": "^4.1.0",
+          "markdown-it": "^13.0.1"
+     },
+     "devDependencies": {
+          "nodemon": "^3.0.1"
+     }
+}

@@ -1,0 +1,13 @@
+<section class="error-page">
+     <div class="container">
+       <h1>Error</h1>
+       <h2>Something went wrong</h2>
+       <p>We're experiencing some technical difficulties. Please try again later.</p>
+       <% if (process.env.NODE_ENV === 'development' && error) { %>
+         <div class="error-details">
+           <pre><%= error.stack %></pre>
+         </div>
+       <% } %>
+       <a href="/" class="button">Back to Home</a>
+     </div>
+   </section>
