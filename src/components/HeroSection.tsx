@@ -57,9 +57,9 @@ export default function HeroSection() {
           </div>
           
           <div className="flex justify-center space-x-6">
-            <SocialLink href="https://github.com" label="GitHub" />
-            <SocialLink href="https://scholar.google.com" label="Google Scholar" />
-            <SocialLink href="https://linkedin.com" label="LinkedIn" />
+            <SocialLink href="https://github.com/sophlzy3" label="GitHub" />
+            {/* <SocialLink href="https://scholar.google.com" label="Google Scholar" /> */}
+            <SocialLink href="https://www.linkedin.com/in/sophie-liu-1b741029b" label="LinkedIn" />
           </div>
         </motion.div>
       </div>
@@ -73,7 +73,7 @@ function SocialLink({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white transition-colors"
+      className="px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white transition-colors"
     >
       {label}
     </Link>

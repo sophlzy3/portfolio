@@ -6,27 +6,27 @@ import { motion } from 'framer-motion';
 const skillGroups = [
   {
     id: 1,
-    title: '编程',
+    title: 'Programming',
     skills: ['Python', 'C++', 'Bash', 'ROS2', 'JavaScript', 'TypeScript']
   },
   {
     id: 2,
-    title: '机器学习/人工智能',
-    skills: ['PyTorch', 'TensorFlow', 'PPO', 'A2C', 'DDPG', 'SAC', '计算机视觉']
+    title: 'Machine Learning/Artificial Intelligence',
+    skills: ['PyTorch', 'TensorFlow', 'PPO', 'A2C', 'DDPG', 'SAC', 'Computer Vision']
   },
   {
     id: 3,
-    title: '机器人技术',
-    skills: ['Gazebo', 'RViz', 'RealSense', 'SLAM', '运动规划', '传感器融合']
+    title: 'Robotics',
+    skills: ['Gazebo', 'RViz', 'RealSense', 'SLAM', 'Motion Planning', 'Sensor Fusion']
   },
   {
     id: 4,
-    title: '工具',
+    title: 'Tools',
     skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
   }
 ];
 
-// 技能卡片组件
+// Skill card component
 function SkillCard({ group, index }: { group: typeof skillGroups[0], index: number }) {
   return (
     <motion.div
@@ -45,8 +45,8 @@ function SkillCard({ group, index }: { group: typeof skillGroups[0], index: numb
           {group.skills.map((skill) => (
             <span 
               key={skill} 
-              className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm"
-            >
+              className="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-mono"
+              >
               {skill}
             </span>
           ))}
@@ -67,9 +67,9 @@ export default function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">技能</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            我的技术栈和专业技能，涵盖编程、机器学习、机器人技术和开发工具。
+            My technical stack and professional skills, covering programming, machine learning, robotics, and development tools.
           </p>
         </motion.div>
         
