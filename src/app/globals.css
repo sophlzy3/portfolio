@@ -19,7 +19,7 @@
   --color-card-border: var(--card-border);
   --color-card-shadow: var(--card-shadow);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @media (prefers-color-scheme: dark) {
