@@ -18,8 +18,9 @@ const config: Config = {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: ['Inter', 'IBM Plex Sans', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        heading: ['Space Grotesk', 'sans-serif'],
+        sans: ['var(--font-inter)', 'var(--font-ibm-plex-sans)', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       boxShadow: {
         'card': '0 4px 6px var(--card-shadow)',

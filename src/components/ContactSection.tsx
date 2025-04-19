@@ -14,9 +14,9 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">简历 & 联系方式</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Resume & Contact</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            获取我的完整简历或通过以下方式与我联系。
+            Get my complete resume or contact me through the following ways.
           </p>
         </motion.div>
         
@@ -30,15 +30,15 @@ export default function ContactSection() {
               transition={{ duration: 0.5 }}
               className="card-glass rounded-lg p-8 text-center"
             >
-              <h3 className="text-2xl font-bold mb-6">下载简历</h3>
+              <h3 className="text-2xl font-bold mb-6">Download Resume</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                获取我的完整简历，了解我的教育背景、工作经历和研究成果。
+                Get my complete resume, learn about my education, work experience, and research achievements.
               </p>
               <Link 
                 href="#"
                 className="inline-block px-8 py-3 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
               >
-                下载 PDF 版简历
+                Download PDF Resume
               </Link>
             </motion.div>
             
@@ -50,46 +50,46 @@ export default function ContactSection() {
               transition={{ duration: 0.5 }}
               className="card-glass rounded-lg p-8"
             >
-              <h3 className="text-2xl font-bold mb-6 text-center">联系我</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">Contact Me</h3>
               <form className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    姓名
+                    Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="您的姓名"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    邮箱
+                    Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="您的邮箱地址"
+                    placeholder="Your Email Address"
                   />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    留言
+                    Message
                   </label>
                   <textarea
                     id="message"
                     rows={4}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
-                    placeholder="您的留言内容"
+                    placeholder="Your Message"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   className="w-full px-4 py-2 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
                 >
-                  发送留言
+                  Send Message
                 </button>
               </form>
             </motion.div>
