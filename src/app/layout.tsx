@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ThemeInitializer from "@/components/ThemeInitializer";
-import SmoothScroll from "@/components/SmoothScroll";
+import RootClientLayout from "@/components/RootClientLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,23 +29,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="zh" suppressHydrationWarning className="light">
-      <body
-        className={`${inter.variable} ${ibmPlexSans.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col`}
-      >
-        <ThemeProvider>
-          <ThemeInitializer />
-          <SmoothScroll />
-          <Header />
-          <main className="flex-grow pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${ibmPlexSans.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col bg-background text-foreground`}>
+        <RootClientLayout>
+          {children}
+        </RootClientLayout>
       </body>
     </html>
   );

@@ -12,28 +12,14 @@
   --card-shadow: rgba(0, 0, 0, 0.05);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-card-bg: var(--card-bg);
-  --color-card-border: var(--card-border);
-  --color-card-shadow: var(--card-shadow);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-jetbrains-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --accent: #0ea5e9; /* 保持相同的强调色以确保一致性 */
-    --accent-hover: #38bdf8;
-    --card-bg: rgba(30, 30, 30, 0.8);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --card-shadow: rgba(0, 0, 0, 0.2);
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #0ea5e9; /* 保持相同的强调色以确保一致性 */
+  --accent-hover: #38bdf8;
+  --card-bg: rgba(30, 30, 30, 0.8);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.2);
 }
 
 body {
