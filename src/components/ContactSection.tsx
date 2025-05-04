@@ -34,12 +34,13 @@ export default function ContactSection() {
               <p className="text-gray-600 dark:text-gray-400 mb-8">
                 Get my complete resume, learn about my education, work experience, and research achievements.
               </p>
-              <Link 
-                href="#"
+              <a 
+                href="/files/ResumeSophieLiu.pdf"
+                download="Sophie_Liu_Resume.pdf"
                 className="inline-block px-8 py-3 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
               >
                 Download PDF Resume
-              </Link>
+              </a>
             </motion.div>
             
             {/* Contact */}
@@ -55,10 +56,10 @@ export default function ContactSection() {
                 Feel free to reach out to me via email.
               </p>
               <a 
-                href="mailto:sophiezy.liu@mail.utoronto.ca"
+                href="mailto:xx@utoronto.ca"
                 className="inline-block px-8 py-3 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
               >
-                Email
+                Email xx@utoronto.ca
               </a>
             </motion.div>
           </div>
