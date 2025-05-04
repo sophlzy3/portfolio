@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import RootClientLayout from "@/components/RootClientLayout";
+import { SITE_CONFIG } from "@/config/constHero";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,8 +24,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sophie Liu | Robotics and Machine Learning Researcher",
-  description: "Sophie Liu's personal website - Robotics and Machine Learning Researcher",
+  title: SITE_CONFIG.title,
+  description: SITE_CONFIG.description,
+  icons: {
+    icon: SITE_CONFIG.favicon,
+  },
 };
 
 export default function RootLayout({

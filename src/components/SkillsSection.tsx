@@ -7,22 +7,25 @@ const skillGroups = [
   {
     id: 1,
     title: 'Programming',
-    skills: ['Python', 'C++', 'Bash', 'ROS2', 'JavaScript', 'TypeScript']
+    skills: ['Python', 'C++', 'Bash', 'ROS2', 'JavaScript']
   },
   {
     id: 2,
     title: 'Machine Learning/Artificial Intelligence',
-    skills: ['PyTorch', 'TensorFlow', 'PPO', 'A2C', 'DDPG', 'SAC', 'Computer Vision']
+    skills: ['PyTorch', 'TensorFlow', 'PPO'] 
+    // 'A2C', 'DDPG', 'SAC', 'Computer Vision']
   },
   {
     id: 3,
     title: 'Robotics',
-    skills: ['Gazebo', 'RViz', 'RealSense', 'SLAM', 'Motion Planning', 'Sensor Fusion']
+    skills: ['RViz', 'SLAM', 'Motion Planning']
+    // skills: ['Gazebo', 'RViz', 'RealSense', 'SLAM', 'Motion Planning', 'Sensor Fusion']
   },
   {
     id: 4,
     title: 'Tools',
-    skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
+    skills: ['Git', 'LaTeX', 'Notion', 'Linux']
+    // skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
   }
 ];
 

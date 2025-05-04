@@ -4,7 +4,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaGraduationCap } from 'react-icons/fa';
-import { SOCIAL_LINKS, TYPE_ANIMATION_SEQUENCE } from '@/config/constHero';
 
 export default function HeroSection() {
   return (
@@ -25,7 +24,16 @@ export default function HeroSection() {
             <p className="h-16 md:h-12">
               Focusing on{' '}
               <TypeAnimation
-                sequence={TYPE_ANIMATION_SEQUENCE}
+                sequence={[
+                  'Intelligent Control',
+                  2000,
+                  'Embodied AI',
+                  2000,
+                  'Sim-to-Real Transfer',
+                  2000,
+                  'Curiosity-Driven Learning',
+                  2000,
+                ]}
                 wrapper="span"
                 speed={50}
                 className="text-accent font-medium"
@@ -50,22 +58,20 @@ export default function HeroSection() {
           </div>
           
           <div className="flex justify-center space-x-6">
-            {Object.entries(SOCIAL_LINKS).map(([key, { url, label }]) => {
-              const iconMap = {
-                github: <FaGithub className="w-5 h-5" />,
-                googleScholar: <FaGraduationCap className="w-5 h-5" />,
-                linkedin: <FaLinkedin className="w-5 h-5" />
-              };
-              
-              return (
-                <SocialLink 
-                  key={key}
-                  href={url}
-                  label={label}
-                  icon={iconMap[key as keyof typeof iconMap]}
-                />
-              );
-            })}
+            <SocialLink 
+              href="https://github.com/sophlzy3" 
+              label="GitHub"
+              icon={<FaGithub className="h-5 w-5" />}
+            />
+            <SocialLink 
+              href="https://scholar.google.com" 
+              label="Google Scholar"
+              icon={<FaGraduationCap className="h-5 w-5" />}
+            />
+            <SocialLink 
+              href="https://www.linkedin.com/in/sophie-liu-1b741029b" 
+              label="LinkedIn"
+              icon={<FaLinkedin className="h-5 w-5" />}
           </div>
         </motion.div>
       </div>
@@ -79,10 +85,10 @@ function SocialLink({ href, label, icon }: { href: string; label: string; icon?:
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white transition-colors flex items-center gap-3"
+      className="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-accent hover:text-white dark:hover:bg-accent dark:hover:text-white transition-colors"
     >
       {icon}
-      <span className="ml-2">{label}</span>
+      {label}
     </Link>
   );
-}
+} 
