@@ -72,6 +72,7 @@ export default function HeroSection() {
               href="https://www.linkedin.com/in/sophie-liu-1b741029b" 
               label="LinkedIn"
               icon={<FaLinkedin className="h-5 w-5" />}
+            />
           </div>
         </motion.div>
       </div>
