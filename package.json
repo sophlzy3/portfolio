@@ -4,8 +4,7 @@
   "private": true,
   "homepage": "https://github.com/sophlzy3/portfolio",
   "scripts": {
-    "build": "next build",
-    "export": "next build && next export"
+    "build": "next build"  
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.5",
