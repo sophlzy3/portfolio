@@ -32,7 +32,7 @@ export const SOCIAL_LINKS = {
   //   heroDisplay: true,
   // },
   linkedin: {
-    url: "https://www.linkedin.com/in/sophie-liu-1b741029b",
+    url: "https://www.linkedin.com/in/sophiezyliu",
     label: "LinkedIn",
     heroDisplay: true,
   },

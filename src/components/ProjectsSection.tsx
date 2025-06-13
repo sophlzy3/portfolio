@@ -83,9 +83,9 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects & Publications</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            My research projects and academic achievements, focusing on robotics control, reinforcement learning, and embodied AI.
+            {/* My research projects and academic achievements, focusing on robotics control, reinforcement learning, and embodied AI. */}
           </p>
         </motion.div>
         
