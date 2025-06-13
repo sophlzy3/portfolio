@@ -4,13 +4,8 @@
   "private": true,
   "homepage": "https://github.com/sophlzy3/portfolio",
   "scripts": {
-    "dev": "./node_modules/.bin/next dev",
-    "build": "./node_modules/.bin/next build",
-    "start": "./node_modules/.bin/next start",
-    "lint": "next lint",
-    "static": "rm -rf .next out && NODE_ENV=development next build",
-    "preview": "npx serve out -s",
-    "deploy": "rm -rf .next out && NODE_ENV=production next build && gh-pages -d out"
+    "build": "next build",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.5",

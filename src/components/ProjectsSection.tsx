@@ -2,61 +2,69 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { PROJECTS } from '@/config/constHero';
+
+// Define the type for project links
+type ProjectLinks = {
+  paper?: string;
+  github?: string;
+  demo?: string;
+};
 
 // 项目数据
-const projects = [
-  {
-    id: 1,
-    title: 'Robot Motion Control with PPO',
-    abstract: 'Implemented adaptive motion control for quadruped robots using proximal policy optimization, addressing challenges in complex terrain.',
-    image: '/placeholder-project1.jpg',
-    tags: ['PPO', 'ROS2', 'Reinforcement Learning'],
-    links: {
-      paper: '#',
-      github: '#',
-      demo: '#'
-    }
-  },
-  {
-    id: 2,
-    title: 'Visual SLAM for Sim-to-Real Transfer',
-    abstract: 'Developed a novel visual SLAM algorithm that seamlessly transitions from simulated environments to real-world scenarios, improving localization accuracy.',
-    image: '/placeholder-project2.jpg',
-    tags: ['SLAM', 'Computer Vision', 'Transfer Learning'],
-    links: {
-      paper: '#',
-      github: '#',
-      demo: '#'
-    }
-  },
-  {
-    id: 3,
-    title: 'Curiosity-Driven Robotics Exploration',
-    abstract: 'Implemented an exploration algorithm based on intrinsic motivation, enabling robots to autonomously learn and explore in unknown environments.',
-    image: '/placeholder-project3.jpg',
-    tags: ['Intrinsic Motivation', 'Exploration Strategies', 'Reinforcement Learning'],
-    links: {
-      paper: '#',
-      github: '#',
-      demo: '#'
-    }
-  },
-  {
-    id: 4,
-    title: 'Multimodal Perception Fusion System',
-    abstract: 'Designed a multi-sensor fusion architecture that integrates visual, tactile, and audio information to enhance robot environmental perception.',
-    image: '/placeholder-project4.jpg',
-    tags: ['Multimodal Learning', 'Sensor Fusion', 'ROS2'],
-    links: {
-      paper: '#',
-      github: '#',
-      demo: '#'
-    }
-  }
-];
+// const projects = [
+//   {
+//     id: 1,
+//     title: 'Robot Motion Control with PPO',
+//     abstract: 'Implemented adaptive motion control for quadruped robots using proximal policy optimization, addressing challenges in complex terrain.',
+//     image: '/placeholder-project1.jpg',
+//     tags: ['PPO', 'ROS2', 'Reinforcement Learning'],
+//     links: {
+//       paper: '#',
+//       github: '#',
+//       demo: '#'
+//     }
+//   },
+//   {
+//     id: 2,
+//     title: 'Visual SLAM for Sim-to-Real Transfer',
+//     abstract: 'Developed a novel visual SLAM algorithm that seamlessly transitions from simulated environments to real-world scenarios, improving localization accuracy.',
+//     image: '/placeholder-project2.jpg',
+//     tags: ['SLAM', 'Computer Vision', 'Transfer Learning'],
+//     links: {
+//       paper: '#',
+//       github: '#',
+//       demo: '#'
+//     }
+//   },
+//   {
+//     id: 3,
+//     title: 'Curiosity-Driven Robotics Exploration',
+//     abstract: 'Implemented an exploration algorithm based on intrinsic motivation, enabling robots to autonomously learn and explore in unknown environments.',
+//     image: '/placeholder-project3.jpg',
+//     tags: ['Intrinsic Motivation', 'Exploration Strategies', 'Reinforcement Learning'],
+//     links: {
+//       paper: '#',
+//       github: '#',
+//       demo: '#'
+//     }
+//   },
+//   {
+//     id: 4,
+//     title: 'Multimodal Perception Fusion System',
+//     abstract: 'Designed a multi-sensor fusion architecture that integrates visual, tactile, and audio information to enhance robot environmental perception.',
+//     image: '/placeholder-project4.jpg',
+//     tags: ['Multimodal Learning', 'Sensor Fusion', 'ROS2'],
+//     links: {
+//       paper: '#',
+//       github: '#',
+//       demo: '#'
+//     }
+//   }
+// ];
 
 // 项目卡片组件
-function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
+function ProjectCard({ project, index }: { project: typeof PROJECTS[0], index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -79,7 +87,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
           {project.tags.map((tag) => (
             <span 
               key={tag} 
-              className="px-2 py-1 text-xs rounded-full bg-accent/10 text-accent"
+              className="px-2 py-1 text-xs rounded-full text-accent bg-[var(--tag-bg)]"
             >
               {tag}
             </span>
@@ -87,24 +95,30 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
         </div>
         
         <div className="flex space-x-4">
-          <Link 
-            href={project.links.paper} 
-            className="text-sm text-accent hover:text-accent-hover transition-colors"
-          >
-            Paper
-          </Link>
-          <Link 
-            href={project.links.github} 
-            className="text-sm text-accent hover:text-accent-hover transition-colors"
-          >
-            GitHub
-          </Link>
-          <Link 
-            href={project.links.demo} 
-            className="text-sm text-accent hover:text-accent-hover transition-colors"
-          >
-            Demo
-          </Link>
+          {project.links.paper && (
+            <Link 
+              href={project.links.paper} 
+              className="text-sm text-accent hover:text-accent-hover transition-colors border border-accent rounded-md px-3 py-1"
+            >
+              Paper
+            </Link>
+          )}
+          {project.links.github && (
+            <Link 
+              href={project.links.github} 
+              className="text-sm text-accent hover:text-white hover:bg-accent transition-colors border border-accent rounded-md px-3 py-1"
+            >
+              GitHub
+            </Link>
+          )}
+          {project.links.demo && (
+            <Link 
+              href={project.links.demo} 
+              className="text-sm text-accent hover:text-accent-hover transition-colors border border-accent rounded-md px-3 py-1"
+            >
+              Demo
+            </Link>
+          )}
         </div>
       </div>
     </motion.div>
@@ -129,7 +143,7 @@ export default function ProjectsSection() {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {PROJECTS.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { SOCIAL_LINKS } from '@/config/constHero';
 
 export default function ContactSection() {
   return (
@@ -35,8 +36,8 @@ export default function ContactSection() {
                 Get my complete resume, learn about my education, work experience, and research achievements.
               </p>
               <a 
-                href="/files/ResumeSophieLiu.pdf"
-                download="Sophie_Liu_Resume.pdf"
+                href={SOCIAL_LINKS.resume_pdf.url}
+                download={SOCIAL_LINKS.resume_pdf.label}
                 className="inline-block px-8 py-3 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
               >
                 Download PDF Resume
@@ -56,10 +57,10 @@ export default function ContactSection() {
                 Feel free to reach out to me via email.
               </p>
               <a 
-                href="mailto:xx@utoronto.ca"
+                href={SOCIAL_LINKS.email.url}
                 className="inline-block px-8 py-3 bg-accent hover:bg-accent-hover text-white rounded-md transition-colors"
               >
-                Email xx@utoronto.ca
+                Email {SOCIAL_LINKS.email.label}
               </a>
             </motion.div>
           </div>

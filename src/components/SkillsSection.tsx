@@ -1,36 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-// 技能数据
-const skillGroups = [
-  {
-    id: 1,
-    title: 'Programming',
-    skills: ['Python', 'C++', 'Bash', 'ROS2', 'JavaScript']
-  },
-  {
-    id: 2,
-    title: 'Machine Learning/Artificial Intelligence',
-    skills: ['PyTorch', 'TensorFlow', 'PPO'] 
-    // 'A2C', 'DDPG', 'SAC', 'Computer Vision']
-  },
-  {
-    id: 3,
-    title: 'Robotics',
-    skills: ['RViz', 'SLAM', 'Motion Planning']
-    // skills: ['Gazebo', 'RViz', 'RealSense', 'SLAM', 'Motion Planning', 'Sensor Fusion']
-  },
-  {
-    id: 4,
-    title: 'Tools',
-    skills: ['Git', 'LaTeX', 'Notion', 'Linux']
-    // skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
-  }
-];
+import { SKILLS } from '@/config/constHero';
 
 // Skill card component
-function SkillCard({ group, index }: { group: typeof skillGroups[0], index: number }) {
+function SkillCard({ group, index }: { group: typeof SKILLS[0], index: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -77,7 +51,7 @@ export default function SkillsSection() {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillGroups.map((group, index) => (
+          {SKILLS.map((group, index) => (
             <SkillCard key={group.id} group={group} index={index} />
           ))}
         </div>

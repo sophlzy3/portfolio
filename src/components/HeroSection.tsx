@@ -50,7 +50,7 @@ export default function HeroSection() {
           </div>
           
           <div className="flex justify-center space-x-6">
-            {Object.entries(SOCIAL_LINKS).map(([key, { url, label }]) => {
+            {Object.entries(SOCIAL_LINKS).filter(([key, { heroDisplay }]) => heroDisplay).map(([key, { url, label }]) => {
               const iconMap = {
                 github: <FaGithub className="w-5 h-5" />,
                 googleScholar: <FaGraduationCap className="w-5 h-5" />,
