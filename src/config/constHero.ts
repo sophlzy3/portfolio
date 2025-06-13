@@ -1,4 +1,4 @@
-// ======= SITE CONFIG =======
+// ============================== SITE CONFIG ==============================
 export const SITE_CONFIG = {
   title: "Sophie Liu | Robotics and Machine Learning Researcher",
   description: "Sophie Liu's personal website - Robotics and Machine Learning Researcher",
@@ -14,7 +14,7 @@ export const NAV_LINKS = [
 ] as const; 
 
 
-// ======= HERO SECTION =======
+// ============================== HERO SECTION ==============================
 export const SOCIAL_LINKS = {
   email: {
     url: 'mailto:sophiezy.liu@utoronto.ca',
@@ -58,7 +58,7 @@ export const ANIMATION_CONFIG = {
 export const TYPE_ANIMATION_SEQUENCE = ANIMATION_CONFIG.texts.flatMap(text => [text, ANIMATION_CONFIG.speed]);
 
 
-// ======= PROJECTS SECTION =======
+// ============================== PROJECTS SECTION ==============================
 type ProjectLinks = {
   paper?: string;
   github?: string;
@@ -187,5 +187,64 @@ export const SKILLS: SkillGroup[] = [
     title: 'Tools',
     skills: ['Git', 'LaTeX', 'Linux', 'Notion']
     // skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
+  }
+];
+
+// ============================== RESEARCH SECTION ==============================
+
+export const RESEARCH_TAGLINE = 'My research interests have evolved from control theory to reinforcement learning, then to embodied AI and sim-to-real transfer.'
+// Research Interests
+export const RESEARCH_INTERESTS = [
+  {
+    id: 1,
+    phase: 'Control Theory',
+    year: '2018-2019',
+    description: 'Research nonlinear system control and adaptive control algorithms, designing stable controllers for complex robot systems.',
+    icon: '🔄'
+  },
+  {
+    id: 2,
+    phase: 'Reinforcement Learning',
+    year: '2019-2020',
+    description: 'Explore model-based and model-free reinforcement learning methods, developing efficient policy optimization algorithms.',
+    icon: '🧠'
+  },
+  {
+    id: 3,
+    phase: 'Embodied AI',
+    year: '2020-2022',
+    description: 'Research how to combine intelligent algorithms with physical robot systems to achieve intelligent behavior in the real world.',
+    icon: '🤖'
+  },
+  {
+    id: 4,
+    phase: 'Sim-to-Real Transfer',
+    year: '2022-present',
+    description: 'Solve the challenge of transferring intelligent agents trained in simulation environments to the real world, reducing the gap between simulation and reality.',
+    icon: '🌉'
+  }
+];
+
+// Current Research Problems
+export const CURRENT_RESEARCH_PROBLEMS = [
+  // {
+  //   id: 1,
+  //   title: 'Multimodal Perception and Decision-Making',
+  //   description: 'How to effectively integrate multiple sensing modalities, such as vision, touch, and sound, to improve the understanding and decision-making capabilities of robots.'
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Sample-Efficient Learning',
+  //   description: 'Develop algorithms that can learn quickly from a small number of samples, reducing the amount of data and time required for robots to learn new tasks.'
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Robustness and Uncertainty',
+  //   description: 'Improve the robustness and adaptability of robot systems in the face of environmental changes and uncertainties.'
+  // }
+  {
+    id: 1,
+    title: 'Bayesian Optimization Under Uncertainty',
+    description: "I'm current working with professor Justin Béland on a Bayesian approach that leverages Gaussian process surrogate models and tailored acquisition functions to efficiently identify robust optimal designs under uncertainty in engineering systems.."
   }
 ];

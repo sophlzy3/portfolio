@@ -9,8 +9,8 @@
   --accent-hover: #0284c7;
   --card-bg: rgba(255, 255, 255, 0.8);
   --card-border: rgba(0, 0, 0, 0.1);
-  --card-shadow: rgba(0, 0, 0, 0.05);
-  --tag-bg: rgba(243, 244, 246, 0.8); /* Light gray background for links */
+  --card-shadow: rgba(0, 0, 0, 0.2);
+  --tag-bg-light: rgba(225, 225, 225, 0.74); /* Light gray background for tags */
 }
 
 .dark {
@@ -20,8 +20,8 @@
   --accent-hover: #38bdf8;
   --card-bg: rgba(30, 30, 30, 0.8);
   --card-border: rgba(255, 255, 255, 0.1);
-  --card-shadow: rgba(0, 0, 0, 0.2);
-  --tag-bg: rgba(31, 41, 55, 0.8); /* Dark gray background for links */
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --tag-bg-dark: rgba(31, 41, 55, 0.8); /* Dark gray background for tags */
 }
 
 body {

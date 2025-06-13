@@ -16,7 +16,11 @@ const config: Config = {
         },
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        'tag-bg': 'var(--tag-bg)',
+        'link-bg': 'var(--link-bg)',
+        'tag-bg': {
+          DEFAULT: 'var(--tag-bg-light)',
+          dark: 'var(--tag-bg-dark)'
+        },
       },
       fontFamily: {
         heading: ['Space Grotesk', 'sans-serif'],

@@ -35,7 +35,7 @@ function SkillCard({ group, index }: { group: typeof SKILLS[0], index: number })
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
