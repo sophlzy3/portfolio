@@ -37,7 +37,7 @@ export const SOCIAL_LINKS = {
     heroDisplay: true,
   },
   resume_pdf: {
-    url: "/files/ResumeSophieLiu.pdf",
+    url: "/files/ResumeSophieLiu-research.pdf",
     label: "SophieLiu_Resume.pdf",
     heroDisplay: false,
   },
