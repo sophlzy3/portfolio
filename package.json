@@ -5,7 +5,8 @@
   "homepage": "https://github.com/sophlzy3/portfolio",
   "scripts": {
     "build": "next build",
-    "dev": "next dev"
+    "dev": "next dev",
+    "analyze-nef": "node scripts/convert-nef-simple.js"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.5",

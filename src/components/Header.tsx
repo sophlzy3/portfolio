@@ -6,11 +6,8 @@ import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Research', href: '#research' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'About', href: '/' },
+  { name: 'Photography', href: '/photography' },
 ];
 
 export default function Header() {
@@ -22,18 +19,18 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="#home" className="text-xl font-mono font-bold text-gray-900 dark:text-white">
+            <Link href="/" className="text-xl font-mono font-bold text-gray-900 dark:text-white">
               Sophie<span className="text-accent">.</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 ml-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors font-mono"
               >
                 {link.name}
               </Link>
@@ -44,7 +41,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <Link 
               href="#" 
-              className="hidden md:block px-4 py-2 rounded-md bg-accent hover:bg-accent-hover text-white transition-colors"
+              className="hidden md:block px-4 py-2 rounded-md bg-accent hover:bg-accent-hover text-white transition-colors font-mono"
             >
               Download Resume
             </Link>

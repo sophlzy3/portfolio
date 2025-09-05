@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: 'Bayesian Optimization under Uncertainty',
     abstract: 'Robust Gaussian Process and entropy-based Bayesian optimization framework under uncertainty.',
-    image: '/placeholder-project1.jpg',
+    image: '/project_img/bayesopt.png',
     tags: ['Python', 'Bayesian Optimization', 'Uncertainty Estimation', 'Entropy-Based Acquisition'],
     links: {
       // paper: '#',
@@ -139,7 +139,7 @@ export const PROJECTS: Project[] = [
     id: 2,
     title: 'Drone Acrobatics',
     abstract: 'Developed and benchmarked a GRU-based deep learning flight controller trained on synthetic FlightGoggles/TOGT-planner data with noise and occlusion—to predict 6-DOF drone control commands for high-speed trajectory following, evaluated against MPC via Dynamic Time Warping.',
-    image: '/placeholder-project2.jpg',
+    image: '/project_img/da.png',
     tags: ['Python', 'PyTorch', 'ROS', 'Deep Learning', 'TOGT', 'FlightGoggles'],
     links: {
       github: 'https://github.com/sophlzy3/drone-acrobatics',
@@ -184,8 +184,8 @@ export const SKILLS: SkillGroup[] = [
   },
   {
     id: 4,
-    title: 'Tools',
-    skills: ['Git', 'LaTeX', 'Linux', 'Notion']
+    title: 'Tools/Misc',
+    skills: ['Git', 'LaTeX', 'Linux', 'Notion', "Teamwork", "Time Management", "Communication"]
     // skills: ['Git', 'Docker', 'LaTeX', 'Notion', 'Linux', 'CUDA']
   }
 ];
